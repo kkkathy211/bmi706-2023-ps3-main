@@ -94,12 +94,12 @@ st.write(subset)
 
 ### P2.4 ###
 # replace with st.selectbox
-cancer_type = subset["Cancer"].unique().tolist()
+cancer_types = subset["Cancer"].unique().tolist()
 
 cancer = st.selectbox(
     "Select Cancer Type",
     options = cancer_types,
-    index=cancer_type.index("Malignant neoplasm of stomach")
+    index=cancer_types.index("Malignant neoplasm of stomach")
 )
 subset = subset[subset["Cancer"] == cancer]
 ### P2.4 ###
