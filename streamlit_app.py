@@ -124,10 +124,10 @@ chart = alt.Chart(subset).mark_rect().encode(
     y=alt.Y("Country", title="Country"),
     color=alt.Color(
         "Rate",
-        scale=alt.Scale(type="log", domain=[0.01, 1000], clamp=True)
+        scale=alt.Scale(type="log", domain=[0.01, 1000], clamp=True),
         title="Mortality rate per 100k",
     ),
-    tooltip=["Country","Age","Rate"],
+    tooltip=["Country", "Age", "Rate"],
 ).add_params(
     brush
 ).properties(
